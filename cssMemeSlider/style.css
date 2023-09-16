@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;  
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2%;
+  background-color: #25282a;
+}
+
+
+.heading {
+text-align: center;
+color: #BB945F;
+}
+
+.main {
+  height: 100vh;
+}
+
+.item-title {
+  display: inline;
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+
+}
+
+[name="mem-button"] {
+
+}
+
+.imgs-list {
+  display: flex;
+  gap: 4%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-item {
+  flex: 0 0 100%;
+ width: 100%;
+  height: 100%;
+  background-size:  cover;
+  background-repeat: no-repeat;
+}
+
