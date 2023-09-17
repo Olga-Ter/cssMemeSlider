@@ -10,31 +10,41 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <h1 class="heading">cssMemeSlider</h1>
-    </header>
-    <main class="main">
-      <p class="item-title">First MeM</p>
-      <p class="item-title hidden">Second MeM</p>
-      <p class="item-title hidden">Third MeM</p>
-      <p class="item-title hidden">Fourth MeM</p>
-      <input type="radio" name="mem-button" id="first-mem">
-      <input type="radio" name="mem-button" id="second-mem">
-      <input type="radio" name="mem-button" id="third-mem">
-      <input type="radio" name="mem-button" id="fourth-mem">
-      <div class="imgs-list">
-        <div class="img-item" style="background-image: url('assets/mem1.png');">
-        </div>
-        <div class="img-item" style="background-image: url('assets/mem2.jpg')">
-        </div>
-        <div class="img-item" style="background-image: url('assets/mem3.jpg');">
-        </div>
-        <div class="img-item" style="background-image: url('assets/mem4.jpg');">
-        </div>
-      </div>
-  </div>
 
-  </main>
+    <input checked type="radio" name="button" id="button1">
+    <input type="radio" name="button" id="button2">
+    <input type="radio" name="button" id="button3">
+    <input type="radio" name="button" id="button4">
+
+    <div class="imgs-list">
+      <div id="first-mem" class="img-item" style="background-image: url('assets/mem1.png');">
+      </div>
+      <div id="second-mem" class="img-item" style="background-image: url('assets/mem2.jpg')">
+      </div>
+      <div id="third-mem" class="img-item" style="background-image: url('assets/mem3.jpg');">
+      </div>
+      <div id="fourth-mem" class="img-item" style="background-image: url('assets/mem4.jpg');">
+      </div>
+    </div>
+
+    <div class="pagination">
+
+      <div class="title-items">
+        <h2 class="item-title first-mem ">First MeM</h2>
+        <h2 class="item-title second-mem hidden">Second MeM</h2>
+        <h2 class="item-title third-mem hidden">Third MeM</h2>
+        <h2 class="item-title fourth-mem hidden">Fourth MeM</h2>
+      </div>
+
+      <div class="pagination-buttons">
+        <label class="slide-button" for="button1"></label>
+        <label class="slide-button" for="button2"></label>
+        <label class="slide-button" for="button3"></label>
+        <label class="slide-button" for="button4"></label>
+      </div>
+
+    </div>
+
   </div>
 
 </body>
