@@ -5,22 +5,26 @@
   
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
   
 * {
   box-sizing: inherit;
 }
 
+body {
+  overflow: hidden;
+}
+
 .wrapper {
-  width: 100em;
-  height: 100vh;
+  width: 100rem;
+  height: 100%;
   margin: 0 auto;
-  padding: 2em 3em;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #25282a;
+  overflow: hidden;
 }
 
 [name="button"] {
@@ -28,10 +32,11 @@ html {
 }
 
 .imgs-list {
-  width: 84em;
-  height: 55em;
+  width: 84rem;
+  height: 55rem;
+  margin-bottom: 1rem;
   display: flex;
-  gap: 6em;
+  gap: 6rem;
   border-radius: 5%;
   overflow: hidden;
 }
@@ -125,9 +130,13 @@ input#button4:checked ~ .pagination .slide-button.fourth-button {
 }
 
 @media (max-width: 768px) {
+
+  .wrapper {
+    padding-bottom: 10rem;
+  }
  
   .pagination {
-    margin-top: 2em;
+    margin-top: 2em 0 4em 0;
     flex-direction: column;
     justify-content:flex-end;
   }
