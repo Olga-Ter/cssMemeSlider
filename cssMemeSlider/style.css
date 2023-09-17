@@ -12,7 +12,9 @@ html {
 }
 
 body {
+  background-color: #25282a;
   overflow: hidden;
+
 }
 
 .wrapper {
@@ -108,9 +110,9 @@ input#button4:checked ~ .pagination .item-title {
   display: inline-flex;
   width: 2.0rem;
   height: 2.0rem;
-  background: radial-gradient(circle, rgba(26,140,215,1) 40%, rgba(37,40,42,1) 41%);
-  border-radius: 50%;
   margin: 0 0.1rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,140,215,1) 40%, rgba(37,40,42,1) 41%);
   cursor: pointer;
 }
 
