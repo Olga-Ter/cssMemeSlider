@@ -43,6 +43,23 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5%;
+  transition: transform 0.3s;
+}
+
+input#button1:checked ~ .imgs-list .img-item {
+  transform: translateX(0);
+}
+
+input#button2:checked ~ .imgs-list .img-item {
+  transform: translateX(-90em);
+}
+
+input#button3:checked ~ .imgs-list .img-item {
+  transform: translateX(-180em);
+}
+
+input#button4:checked ~ .imgs-list .img-item {
+  transform: translateX(-270em);
 }
   
 .pagination {
@@ -53,31 +70,58 @@ html {
   align-items: center;
 }
 
+.title-items {
+  width: 10em;
+  display: flex;
+  overflow: hidden;
+}
+
 .item-title {
+  flex: 0 0 100%;
+  width: 100%;
   color: #FFF;
-  font-size: 1.5rem;
+  transition: transform 0.3s 0.1s
+}
+
+input#button1:checked ~ .pagination .item-title {
+  transform: translateX(0);
+}
+
+input#button2:checked ~ .pagination .item-title {
+  transform: translateX(-10rem);
+}
+
+input#button3:checked ~ .pagination .item-title {
+  transform: translateX(-20rem);
+}
+
+input#button4:checked ~ .pagination .item-title {
+  transform: translateX(-30rem);
 }
 
 .slide-button {
   display: inline-flex;
-  width: 1rem;
-  height: 1rem;
-  background-clip: content-box;
-  background: white;
+  width: 2.0rem;
+  height: 2.0rem;
+  background: radial-gradient(circle, rgba(26,140,215,1) 40%, rgba(37,40,42,1) 41%);
   border-radius: 50%;
-  margin: 0 1rem 1rem 0;
-  padding: 10px;
+  margin: 0 0.1rem;
   cursor: pointer;
-  border: 2px solid greenyellow;
 }
 
-.hidden {
-  display: none;
-
+.slide-button:hover {
+  background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(37,40,42,1) 41%);
 }
 
-[name="mem-button"] {
+.slide-button:active {
+  background: radial-gradient(circle, rgba(37,40,42,1) 30%, rgba(255,255,255,1) 42%, rgba(37,40,42,1) 43%);
+}
 
+input#button1:checked ~ .pagination .slide-button.first-button,
+input#button2:checked ~ .pagination .slide-button.second-button,
+input#button3:checked ~ .pagination .slide-button.third-button,
+input#button4:checked ~ .pagination .slide-button.fourth-button {
+  background: radial-gradient(circle, rgba(37,40,42,1) 30%, rgba(26,140,215,1) 42%, rgba(37,40,42,1) 43%);
 }
 
 @media (max-width: 768px) {
