@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;  
+}
+  
+html {
+  box-sizing: border-box;
+}
+  
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #25282a;
+  overflow: hidden;
+
+}
+
+.wrapper {
+  width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #25282a;
+  overflow: hidden;
+}
+
+[name="button"] {
+  display: none;
+}
+
+.imgs-list {
+  width: 84rem;
+  height: 55rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 6rem;
+  border-radius: 5%;
+  overflow: hidden;
+}
+  
+.img-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  transition: transform 0.3s;
+}
+
+input#button1:checked ~ .imgs-list .img-item {
+  transform: translateX(0);
+}
+
+input#button2:checked ~ .imgs-list .img-item {
+  transform: translateX(-90em);
+}
+
+input#button3:checked ~ .imgs-list .img-item {
+  transform: translateX(-180em);
+}
+
+input#button4:checked ~ .imgs-list .img-item {
+  transform: translateX(-270em);
+}
+  
+.pagination {
+  width: 84em;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-items {
+  width: 10em;
+  display: flex;
+  overflow: hidden;
+}
+
+.item-title {
+  flex: 0 0 100%;
+  width: 100%;
+  color: #FFF;
+  transition: transform 0.3s 0.1s
+}
+
+input#button1:checked ~ .pagination .item-title {
+  transform: translateX(0);
+}
+
+input#button2:checked ~ .pagination .item-title {
+  transform: translateX(-10rem);
+}
+
+input#button3:checked ~ .pagination .item-title {
+  transform: translateX(-20rem);
+}
+
+input#button4:checked ~ .pagination .item-title {
+  transform: translateX(-30rem);
+}
+
+.slide-button {
+  display: inline-flex;
+  width: 2.0rem;
+  height: 2.0rem;
+  margin: 0 0.1rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,140,215,1) 40%, rgba(37,40,42,1) 41%);
+  cursor: pointer;
+}
+
+.slide-button:hover {
+  background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(37,40,42,1) 41%);
+}
+
+.slide-button:active {
+  background: radial-gradient(circle, rgba(37,40,42,1) 30%, rgba(255,255,255,1) 42%, rgba(37,40,42,1) 43%);
+}
+
+input#button1:checked ~ .pagination .slide-button.first-button,
+input#button2:checked ~ .pagination .slide-button.second-button,
+input#button3:checked ~ .pagination .slide-button.third-button,
+input#button4:checked ~ .pagination .slide-button.fourth-button {
+  background: radial-gradient(circle, rgba(37,40,42,1) 30%, rgba(26,140,215,1) 42%, rgba(37,40,42,1) 43%);
+}
+
+@media (max-width: 768px) {
+
+  .wrapper {
+    padding-bottom: 10rem;
+  }
+ 
+  .pagination {
+    margin-top: 2em 0 4em 0;
+    flex-direction: column;
+    justify-content:flex-end;
+  }
+
+  .title-items {
+    order: 2;
+    align-self: flex-start;
+  }
+}
